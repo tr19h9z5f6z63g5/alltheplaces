@@ -1,3 +1,5 @@
+# TODO Actually, all stores are promoted as bike retailers. A handful of partners are
+# multisport stores (ie. in ski resorts), which don't have the best "shop" tag.
 import re
 from typing import AsyncIterator, Iterable
 
