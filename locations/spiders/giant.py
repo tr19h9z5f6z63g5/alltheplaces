@@ -97,7 +97,7 @@ class GiantSpider(JSONBlobSpider):
                 feature[key] = "https://" + feature[key]
 
     def post_process_item(self, item: Feature, response: Response, feature: dict) -> Iterable[Feature]:
-        item["ref"] = feature["Code"]
+        item["ref"] = f"{feature['Code']}-{response.meta['country']}"
         item["country"] = response.meta["country"]
         if feature["CountryDisplayName"] == "Österreich":
             item["country"] = "AT"
